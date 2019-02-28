@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "sourceMap": true,
+        "moduleResolution": "node",
         "target": "es5",
         "jsx": "react",
         "lib": [
