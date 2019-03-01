@@ -8,7 +8,7 @@ module.exports = {
         '^.+\\.tsx?$': 'ts-jest'
     },
     testMatch: [
-        '**/src/**.(test|spec).(jsx|tsx|js|ts)'
+        '**/src/**/*.(test|spec).(tsx|ts|jsx|js)'
     ],
     moduleFileExtensions: [
         'ts',
