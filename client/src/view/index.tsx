@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { FilterFeature } from './filters'
+import { GlobalStyle } from "../config/globalStyle";
+import { FilterFeature } from './filters';
+import { Wrapper, AsideWrapper, ListWrapper, HeaderWrapper } from "./styled";
 
-const filterList = [
+const list = [
   {
     uuid: 1,
     title: 'Gender',
@@ -22,7 +24,7 @@ const filterList = [
   },
   {
     uuid: 2,
-    title: 'Sex',
+    title: 'Lorem',
     icon: 'ico-files',
     type: 'list',
     items: [
@@ -41,7 +43,16 @@ const filterList = [
 ];
 
 export const App = () => (
-    <div>
-        <FilterFeature list={filterList} />
-    </div>
+  <>
+    <GlobalStyle />
+    <HeaderWrapper>Header</HeaderWrapper>
+    <Wrapper>
+      <AsideWrapper>
+        <FilterFeature list={list} />
+      </AsideWrapper>
+      <ListWrapper>
+        listado
+      </ListWrapper>
+    </Wrapper>
+  </>
 );
