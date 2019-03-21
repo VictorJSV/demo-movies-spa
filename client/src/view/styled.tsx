@@ -11,6 +11,7 @@ export const AsideWrapper = styled.div`
 `;
 
 export const ListWrapper = styled.div`
+  padding: 10px 20px;
   width: calc(100% - 250px);
 `;
 

@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { GlobalStyle } from "../config/globalStyle";
+import { GlobalStyle } from '../config/globalStyle';
 import { FilterFeature } from './filters';
-import { Wrapper, AsideWrapper, ListWrapper, HeaderWrapper } from "./styled";
+import { ResultFeature } from './results';
+import { Wrapper, AsideWrapper, ListWrapper, HeaderWrapper } from './styled';
 
 const list = [
   {
@@ -42,6 +43,24 @@ const list = [
   }
 ];
 
+const ResultList = [
+  {
+    uuid: 1,
+    imageSrc: 'https://picsum.photos/200/300',
+    title: 'The consulant'
+  },
+  {
+    uuid: 1,
+    imageSrc: 'https://picsum.photos/200/300',
+    title: 'The consulant 2'
+  },
+  {
+    uuid: 1,
+    imageSrc: 'https://picsum.photos/200/300',
+    title: 'The consulant 3'
+  }
+];
+
 export const App = () => (
   <>
     <GlobalStyle />
@@ -51,7 +70,7 @@ export const App = () => (
         <FilterFeature list={list} />
       </AsideWrapper>
       <ListWrapper>
-        listado
+        <ResultFeature list={ResultList} />
       </ListWrapper>
     </Wrapper>
   </>

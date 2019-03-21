@@ -1,16 +1,17 @@
 {
-    "compilerOptions": {
-        "sourceMap": true,
-        "moduleResolution": "node",
-        "target": "es5",
-        "jsx": "react",
-        "lib": [
-            "dom",
-            "es2015",
-            "es2015.promise"
-        ]
-    },
-    "exclude": [
-        "node_modules"
+  "compilerOptions": {
+    "sourceMap": true,
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es2015",
+      "es2015.promise"
     ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
