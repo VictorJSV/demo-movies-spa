@@ -1,5 +1,5 @@
-import { ResultList } from './components/ResultsList';
+import { ResultListContainer } from './containers/ResultListContainer';
 
 export {
-  ResultList as ResultFeature,
+  ResultListContainer as ResultFeature,
 }

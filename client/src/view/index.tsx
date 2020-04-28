@@ -43,24 +43,6 @@ const list = [
   }
 ];
 
-const ResultList = [
-  {
-    uuid: 1,
-    imageSrc: 'https://picsum.photos/200/300',
-    title: 'The consulant'
-  },
-  {
-    uuid: 1,
-    imageSrc: 'https://picsum.photos/200/300',
-    title: 'The consulant 2'
-  },
-  {
-    uuid: 1,
-    imageSrc: 'https://picsum.photos/200/300',
-    title: 'The consulant 3'
-  }
-];
-
 export const App = () => (
   <>
     <GlobalStyle />
@@ -70,7 +52,7 @@ export const App = () => (
         <FilterFeature list={list} />
       </AsideWrapper>
       <ListWrapper>
-        <ResultFeature list={ResultList} />
+        <ResultFeature/>
       </ListWrapper>
     </Wrapper>
   </>

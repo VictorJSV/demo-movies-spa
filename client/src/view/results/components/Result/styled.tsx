@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Layout = styled.div`
+  cursor: pointer;
   padding: 0 8px;
   width: 216px;
 `;

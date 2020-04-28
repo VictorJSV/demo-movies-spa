@@ -8,6 +8,7 @@ import {
 
 interface Props {
   item: Result;
+  onClick(e: React.MouseEvent<HTMLButtonElement>);
 }
 
 interface Result {
@@ -15,8 +16,8 @@ interface Result {
   title: string;
 }
 
-export const Result: React.SFC<Props> = ({item}) => (
-  <Layout>
+export const Result: React.SFC<Props> = ({item, onClick}) => (
+  <Layout onClick={onClick}>
     <ImageWrapper><Image src={item.imageSrc}/></ImageWrapper>
     <Title>{item.title}</Title>
   </Layout>
