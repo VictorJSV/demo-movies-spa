@@ -19,6 +19,7 @@ server.use(middlewares);
 server.use(jsonServer.rewriter({
   //'/api/*': '/$1',
   '/movies': '/movies',
+  '/genres': '/genres',
 }));
 
 // To handle POST, PUT and PATCH you need to use a body-parser

@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import { serviceMovies } from './services';
+import { service } from './services';
 
 const fetchMoviesRequest = () => ({
     type: actionTypes.FETCH_MOVIES_REQUEST
@@ -27,7 +27,7 @@ export const fetchMovies = (): Function => {
     return async dispatch => {
         dispatch(fetchMoviesRequest())
         try {
-            const data = await serviceMovies.getMovies();
+            const data = await service.getMovies();
             dispatch(fetchMoviesSuccess(data.data));
         } catch(e) {
             dispatch(fetchMoviesFailure(e.message));

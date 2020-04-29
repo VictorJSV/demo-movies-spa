@@ -3,21 +3,59 @@
         "data": [
             {
                 "uuid": 1,
-                "imageSrc": "https://picsum.photos/200/300",
+                "imageSrc": "https://picsum.photos/id/22/200/300",
                 "title": "Bad Boys para siempre",
-                "detail": "Los policías de la vieja escuela Mike Lowery y Marcus Burnett vuelven a patrullar juntos para derrotar al líder vicioso de un cartel de drogas de Miami. El recién creado equipo de élite AMMO del departamento de policía de Miami junto con Mike y Marcus se enfrentan al despiadado Armando Armas."
+                "detail": "Los policías de la vieja escuela Mike Lowery y Marcus Burnett vuelven a patrullar juntos para derrotar al líder vicioso de un cartel de drogas de Miami. El recién creado equipo de élite AMMO del departamento de policía de Miami junto con Mike y Marcus se enfrentan al despiadado Armando Armas.",
+                "genre": {
+                    "id": 1,
+                    "name": "Action"
+                }
             },
             {
                 "uuid": 2,
-                "imageSrc": "https://picsum.photos/200/300",
+                "imageSrc": "https://picsum.photos/id/23/200/300",
                 "title": "Sonic la película",
-                "detail": "Sonic intenta navegar por las complejidades de la vida en la Tierra con su nuevo mejor amigo, un humano llamado Tom Wachowski. Pronto deben unir fuerzas para evitar que el malvado Dr. Robotnik capture a Sonic y use sus poderes para dominar el mundo."
+                "detail": "Sonic intenta navegar por las complejidades de la vida en la Tierra con su nuevo mejor amigo, un humano llamado Tom Wachowski. Pronto deben unir fuerzas para evitar que el malvado Dr. Robotnik capture a Sonic y use sus poderes para dominar el mundo.",
+                "genre": {
+                    "id": 2,
+                    "name": "Comedy"
+                }
             },
             {
                 "uuid": 3,
-                "imageSrc": "https://picsum.photos/200/300",
+                "imageSrc": "https://picsum.photos/id/24/200/300",
                 "title": "Parásitos",
-                "detail": "Tanto Gi Taek como su familia están sin trabajo. Cuando su hijo mayor, Gi Woo, empieza a impartir clases particulares en la adinerada casa de los Park, las dos familias, que tienen mucho en común pese a pertenecer a dos mundos totalmente distintos, entablan una relación de resultados imprevisibles."
+                "detail": "Tanto Gi Taek como su familia están sin trabajo. Cuando su hijo mayor, Gi Woo, empieza a impartir clases particulares en la adinerada casa de los Park, las dos familias, que tienen mucho en común pese a pertenecer a dos mundos totalmente distintos, entablan una relación de resultados imprevisibles.",
+                "genre": {
+                    "id": 3,
+                    "name": "Crime"
+                }
+            },
+            {
+                "uuid": 4,
+                "imageSrc": "https://picsum.photos/id/25/200/300",
+                "title": "1917",
+                "detail": "Durante la Primera Guerra Mundial, dos jóvenes soldados británicos reciben una orden, aparentemente, imposible de ejecutar: en una carrera contra el reloj, deben infiltrarse en territorio enemigo para entregar un mensaje que podría salvar a miles de compañeros.",
+                "genre": {
+                    "id": 1,
+                    "name": "Action"
+                }
+            }
+        ]
+    },
+    "genres": {
+        "data": [
+            {
+                "id": 1,
+                "name": "Action"
+            },
+            {
+                "id": 2,
+                "name": "Comedy"
+            },
+            {
+                "id": 3,
+                "name": "Crime"
             }
         ]
     }

@@ -1,0 +1,5 @@
+const ROOT = 'results/genres';
+
+export const FETCH_GENRES_REQUEST = `${ROOT}/FETCH_GENRES_REQUEST`;
+export const FETCH_GENRES_FAILURE = `${ROOT}/FETCH_GENRES_FAILURE`;
+export const FETCH_GENRES_SUCCESS = `${ROOT}/FETCH_GENRES_SUCCESS`;

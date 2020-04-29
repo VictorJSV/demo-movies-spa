@@ -3,8 +3,9 @@ import { Filter } from '../Filter/Filter';
 
 export const FilterList = ({list}) => (
   <div>
-    {list.map((item, index) => (
-      <Filter key={index} list={item} />
-    ))}
+    {/*list.map((item, index) => (
+      
+    ))*/}
+    <Filter list={list} />
   </div>
 );

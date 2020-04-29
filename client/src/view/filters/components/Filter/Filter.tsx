@@ -13,37 +13,23 @@ import {
   ListItemCount,
 } from './styled';
 
-interface List {
-  id: number;
-  title: string;
-  count: number;
-}
-
-interface Filter {
-  uuid: number;
-  title: string;
-  icon: string;
-  type: string;
-  items: List[];
-}
-
 interface Props {
-  list: Filter;
+  list: any;
 }
 
 export const Filter: React.SFC<Props> = ({ list }) => (
-  <Layout type={list.type}>
-    <Header icon={list.icon}>
+  <Layout>
+    <Header>
       <Icon icon={basic_archive_full} size={26} style={{ color: '#929292' }} />
-      <Title>{list.title}</Title>
+      <Title>Genre</Title>
       <Icon icon={arrows_up} size={32} style={{ color: '#929292' }} />
     </Header>
     <Body>
       <List>
-        {list.items.map((item, index) => (
+        {list.map((item, index) => (
           <ListItem key={index}>
-            <ListItemTitle>{item.title}</ListItemTitle>
-            <ListItemCount>{item.count}</ListItemCount>
+            <ListItemTitle>{item.name}</ListItemTitle>
+            <ListItemCount>{'<N>'}</ListItemCount>
           </ListItem>
         ))}
       </List>

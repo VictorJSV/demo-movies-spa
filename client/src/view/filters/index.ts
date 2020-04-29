@@ -1,5 +1,5 @@
-import { FilterList } from './components/FilterList';
+import { FilterListContainer } from './containers/FilterListContainer';
 
 export {
-  FilterList as FilterFeature,
+  FilterListContainer as FilterFeature,
 }
