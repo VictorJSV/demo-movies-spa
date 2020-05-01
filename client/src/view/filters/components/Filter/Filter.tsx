@@ -15,9 +15,10 @@ import {
 
 interface Props {
   list: any;
+  showMoviesByFilter: Function;
 }
 
-export const Filter: React.SFC<Props> = ({ list }) => (
+export const Filter: React.SFC<Props> = ({ list, showMoviesByFilter }) => (
   <Layout>
     <Header>
       <Icon icon={basic_archive_full} size={26} style={{ color: '#929292' }} />
@@ -27,9 +28,9 @@ export const Filter: React.SFC<Props> = ({ list }) => (
     <Body>
       <List>
         {list.map((item, index) => (
-          <ListItem key={index}>
+          <ListItem key={index} onClick={() => {showMoviesByFilter(item.id)}}>
             <ListItemTitle>{item.name}</ListItemTitle>
-            <ListItemCount>{'<N>'}</ListItemCount>
+            <ListItemCount>{item.quantity}</ListItemCount>
           </ListItem>
         ))}
       </List>

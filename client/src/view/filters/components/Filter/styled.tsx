@@ -29,6 +29,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   padding: 11px 20px 11px 54px;
   display: flex;
+  cursor: pointer;
   justify-content: space-between;
 `;
 

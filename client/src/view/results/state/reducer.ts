@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import { MovieModel } from '../models/MovieModel'; 
+import { MovieModel } from '../models/MovieModel';
 
 interface MyReducerState {
   data: MovieModel[];
@@ -47,16 +47,16 @@ export const movies = (state: MyReducerState = initialState, action): MyReducerS
         details: {
           show: true,
           data: movie[0]
-        }, 
+        },
       };
-      case actionTypes.INACTIVE_DETAIL_MOVIE:
-        return {
-          ...state,
-          details: {
-            show: false,
-            data: []
-          }, 
-        };
+    case actionTypes.INACTIVE_DETAIL_MOVIE:
+      return {
+        ...state,
+        details: {
+          show: false,
+          data: []
+        },
+      };
     default:
       return state;
   }

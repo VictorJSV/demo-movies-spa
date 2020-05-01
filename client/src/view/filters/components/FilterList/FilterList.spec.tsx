@@ -14,7 +14,7 @@ it('Component FilterList - render 1 item correctly', () => {
     }
   ];
 
-  const wrapper = shallow(<FilterList list={mock1} />);
+  const wrapper = shallow(<FilterList list={mock1} showMoviesByFilter={()=>{}}/>);
   expect(wrapper.find(Filter)).toHaveLength(1);
 })
 
@@ -36,6 +36,6 @@ it('Component FilterList - render 2 items correctly', () => {
     }
   ];
 
-  const wrapper = shallow(<FilterList list={mock2} />);
+  const wrapper = shallow(<FilterList list={mock2} showMoviesByFilter={()=>{}}/>);
   expect(wrapper.find(Filter)).toHaveLength(mock2.length);
 })

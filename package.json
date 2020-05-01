@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "scripts": {
     "start": "npm-run-parallel server:dev server:rest",
-    "server:dev": "webpack-dev-server --mode development --open",
     "test": "jest",
     "build": "webpack --mode production",
+    "server:dev": "webpack-dev-server --mode development --open",
     "server:rest": "node ./client/jsonserver"
   },
   "devDependencies": {

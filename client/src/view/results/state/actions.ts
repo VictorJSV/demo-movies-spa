@@ -2,15 +2,17 @@ import * as actionTypes from './actionTypes';
 import { service } from './services';
 
 const fetchMoviesRequest = () => ({
-    type: actionTypes.FETCH_MOVIES_REQUEST
+  type: actionTypes.FETCH_MOVIES_REQUEST
 });
+
 const fetchMoviesSuccess = (movies) => ({
-    type: actionTypes.FETCH_MOVIES_SUCCESS,
-    movies
+  type: actionTypes.FETCH_MOVIES_SUCCESS,
+  movies
 });
+
 const fetchMoviesFailure = (error) => ({
-    type: actionTypes.FETCH_MOVIES_FAILURE,
-    error
+  type: actionTypes.FETCH_MOVIES_FAILURE,
+  error
 });
 
 export const activeDetailMovie = (id) => ({
@@ -24,13 +26,13 @@ export const inactiveDetailMovie = () => ({
 
 // thunk
 export const fetchMovies = (): Function => {
-    return async dispatch => {
-        dispatch(fetchMoviesRequest())
-        try {
-            const data = await service.getMovies();
-            dispatch(fetchMoviesSuccess(data.data));
-        } catch(e) {
-            dispatch(fetchMoviesFailure(e.message));
-        }
+  return async dispatch => {
+    dispatch(fetchMoviesRequest())
+    try {
+      const data = await service.getMovies();
+      dispatch(fetchMoviesSuccess(data.data));
+    } catch(e) {
+      dispatch(fetchMoviesFailure(e.message));
     }
+  }
 }

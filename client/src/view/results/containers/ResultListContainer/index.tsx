@@ -3,15 +3,17 @@ import { connect } from 'react-redux';
 import { ResultList } from '../../components/ResultsList';
 import { MovieModel } from '../../models/movieModel';
 import { fetchMovies, activeDetailMovie, inactiveDetailMovie } from '../../state/actions';
+import { getTotalMovies, getMovies } from '../../state/selectors';
 
 interface Props {
-    movieData: MovieModel[];
+    dataMovies: MovieModel[];
     isFetching: boolean;
     error: boolean;
     fetchMovies?: Function;
     activeDetailMovie: Function;
     inactiveDetailMovie: Function;
     details: any;
+    totalMovies: number;
 }
 
 interface State {}
@@ -25,7 +27,15 @@ class Container extends React.Component<Props, State> {
     }
 
     render(): JSX.Element {
-        const { movieData, isFetching, error, activeDetailMovie, details, inactiveDetailMovie } = this.props;
+        const {
+            dataMovies,
+            isFetching,
+            error,
+            activeDetailMovie,
+            details,
+            inactiveDetailMovie,
+            totalMovies
+        } = this.props;
         if (isFetching) {
             return <span>Cargando ...</span>
         }
@@ -39,16 +49,21 @@ class Container extends React.Component<Props, State> {
                 <button onClick={() => inactiveDetailMovie()}>Regresar</button>
             </div>
         }
-        return (<ResultList list={movieData} activeDetailMovie={activeDetailMovie}/>)
+        return (<ResultList
+            list={dataMovies}
+            activeDetailMovie={activeDetailMovie}
+            totalMovies={totalMovies}
+        />)
     }
 }
 
 const mapStateToProps = (state) => {
     return ({
-        movieData: state.movies.data,
+        dataMovies: getMovies(state.movies.data, state.genres.filterBy),
+        totalMovies: getTotalMovies(state.movies.data),
         isFetching: state.movies.isFetching,
         details: state.movies.details,
-        error: state.movies.error
+        error: state.movies.error,
     })
 };
 

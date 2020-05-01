@@ -4,14 +4,22 @@ import { service } from './services';
 const fetchGenresRequest = () => ({
     type: actionTypes.FETCH_GENRES_REQUEST
 });
+
 const fetchGenresSuccess = (genres) => ({
     type: actionTypes.FETCH_GENRES_SUCCESS,
     genres
 });
+
 const fetchGenresFailure = (error) => ({
     type: actionTypes.FETCH_GENRES_FAILURE,
     error
 });
+
+export const showMoviesByFilter = (id) => ({
+  type: actionTypes.SHOW_MOVIES_BY_FILTER,
+  id
+});
+
 
 // thunk
 export const fetchGenres = (): Function => {

@@ -1,11 +1,12 @@
 import * as actionTypes from './actionTypes';
-import { GenreModel } from '../models/genresModel'; 
+import { GenreModel } from '../models/genresModel';
 
 interface MyReducerState {
   data: GenreModel[];
   isFetching: boolean;
   error: boolean;
   errorMessage: string;
+  filterBy: string;
 }
 
 const initialState: MyReducerState = {
@@ -13,6 +14,7 @@ const initialState: MyReducerState = {
   isFetching: false,
   error: false,
   errorMessage: '',
+  filterBy: '',
 }
 
 export const genres = (state: MyReducerState = initialState, action): MyReducerState => {
@@ -34,6 +36,11 @@ export const genres = (state: MyReducerState = initialState, action): MyReducerS
         ...state,
         isFetching: false,
         data: action.genres
+      }
+    case actionTypes.SHOW_MOVIES_BY_FILTER:
+      return {
+        ...state,
+        filterBy: action.id
       }
     default:
       return state;
