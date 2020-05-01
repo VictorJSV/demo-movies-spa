@@ -7,16 +7,16 @@ import { genres } from '../view/filters/state/reducer';
 const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
-    const store = createStore(
-        combineReducers({
-            movies,
-            genres
-        }),
-        composeEnhancers(
-            applyMiddleware(
-                thunk,
-            ),
-        )
-    );
-    return store;
+  const store = createStore(
+    combineReducers({
+      movies,
+      genres
+    }),
+    composeEnhancers(
+      applyMiddleware(
+        thunk,
+      ),
+    )
+  );
+  return store;
 }

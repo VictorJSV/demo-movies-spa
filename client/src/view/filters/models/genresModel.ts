@@ -1,4 +1,4 @@
 export interface GenreModel {
-    id: number;
-    name: string;
+  id: number;
+  name: string;
 }

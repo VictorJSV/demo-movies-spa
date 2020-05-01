@@ -32,20 +32,20 @@ class Container extends React.Component<Props, State> {
 }
 
 const mapStateToProps = (state) => {
-    return ({
-        genresData: state.genres.data,
-        isFetching: state.genres.isFetching,
-        details: state.genres.details,
-        error: state.genres.error
-    })
+  return ({
+    genresData: state.genres.data,
+    isFetching: state.genres.isFetching,
+    details: state.genres.details,
+    error: state.genres.error
+  })
 };
 
 const mapDispatchToProps = dispatch => ({
-    fetchGenres: () => dispatch(fetchGenres()),
-    showMoviesByFilter: (idFilter) => dispatch(showMoviesByFilter(idFilter)),
+  fetchGenres: () => dispatch(fetchGenres()),
+  showMoviesByFilter: (idFilter) => dispatch(showMoviesByFilter(idFilter)),
 });
 
 export const FilterListContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Container)
