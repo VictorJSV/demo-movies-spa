@@ -4,7 +4,7 @@ export const Header = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 8px 14px;
+  padding: 8px 0px;
 `;
 
 export const Title = styled.div`
@@ -18,7 +18,6 @@ export const Body = styled.div`
 export const Layout = styled.div`
   background: #161616;
   color: #929292;
-  width: 250px;
 `;
 
 export const List = styled.ul`
@@ -27,7 +26,7 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  padding: 11px 20px 11px 54px;
+  padding: 11px 10px 11px 34px;
   display: flex;
   cursor: pointer;
   justify-content: space-between;

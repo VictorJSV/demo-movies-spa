@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
 
 export const AsideWrapper = styled.div`
   background: #161616;
+  padding:0 14px;
   width: 250px;
 `;
 

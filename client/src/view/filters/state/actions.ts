@@ -20,6 +20,10 @@ export const showMoviesByFilter = (id) => ({
   id
 });
 
+export const hideMoviesByFilter = () => ({
+  type: actionTypes.HIDE_MOVIES_BY_FILTER
+});
+
 
 // thunk
 export const fetchGenres = (): Function => {

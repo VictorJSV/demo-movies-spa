@@ -42,6 +42,12 @@ export const genres = (state: MyReducerState = initialState, action): MyReducerS
         ...state,
         filterBy: action.id
       }
+      case actionTypes.HIDE_MOVIES_BY_FILTER:
+        console.log('state', state)
+        return {
+          ...state,
+          filterBy: ''
+        }
     default:
       return state;
   }
